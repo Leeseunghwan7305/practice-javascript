@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="index.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Momentum App</title>
+    <title>jaVA challenge</title>
   </head>
   <body>
-    <div class="hello">
-      <h2>Hello!</h2>
+    <h1>Random Number Game</h1>
+    <form id="game-form">
+      <h2>
+        <label for="range">Generate a number between 0 and</label>
+        <input id="range" type="number" />
+      </h2>
+      <h3>
+        <label for="select">Guess the number:</label>
+        <input id="select" type="number" />
+        <button>play!</button>
+      </h3>
+    </form>
+    <div>
+      <span id="userNum"></span>
+      <span id="pcNum"></span>
     </div>
-    <script src="app.js"></script>
+    <h4 id="result"></h4>
+
+    <script scr="app.js"></script>
   </body>
 </html>

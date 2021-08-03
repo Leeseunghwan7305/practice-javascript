@@ -1,15 +1,26 @@
-const title = document.querySelector("h2");
-const body = document.querySelector("body");
-body.style.backgroundColor = "orange";
-title.style.color = "white";
-function handleResize() {
-  const width = window.innerWidth;
-  if (width > 900) {
-    body.style.backgroundColor = "orange";
-  } else if (width > 700) {
-    body.style.backgroundColor = "green";
+const gameForm = document.querySelector("#game-form");
+const range = document.querySelector("#range");
+const select = document.querySelector("#select");
+
+const userNumResult = document.querySelector("#userNum");
+const pcNumResult = document.querySelector("#pcNum");
+const result = documnet.querySelector("#result");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function randomGame(event) {
+  event.preventDefault();
+  const rangeNum = pareInt(range.value);
+  const userNum = pareInt(select.value);
+  const pcNum = Math.floor(Math.random() * rangeNum);
+
+  userNumResult.innerText = `you chose: ${userNum},`;
+  pcNumResult.innerText = `the machine chose: ${pcNum},`;
+
+  if (userNum === pcNum) {
+    result.innerText = "you win!";
   } else {
-    body.style.backgroundColor = "blue";
+    result.innerText = "you lost!";
   }
 }
-window.addEventListener("resize", handleResize);
+gameForm.addEventListener("click", randomGame);
