@@ -7,24 +7,11 @@
     <title>jaVA challenge</title>
   </head>
   <body>
-    <h1>Random Number Game</h1>
-    <form id="game-form">
-      <h2>
-        <label for="range">Generate a number between 0 and</label>
-        <input id="range" type="number" />
-      </h2>
-      <h3>
-        <label for="select">Guess the number:</label>
-        <input id="select" type="number" />
-        <button>play!</button>
-      </h3>
-    </form>
-    <div>
-      <span id="userNum"></span>
-      <span id="pcNum"></span>
-    </div>
-    <h4 id="result"></h4>
+    <form class="hidden" id="login-form"></form>
+    <h1 class="hidden" id="greeting"></h1>
+    <h2 id="clock">00:00</h2>
 
-    <script scr="app.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
   </body>
 </html>
