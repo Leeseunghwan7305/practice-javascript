@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   margin: 0;
   align-items: center;
+  white-space: nowrap;
 }
 body h2 {
   position: absolute;
